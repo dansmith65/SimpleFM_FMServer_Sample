@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="span4">
+        <h2>Season</h2>
+        <h3><?= $this->season->getName(); ?></h3>
+        <dl>
+            <dt>Years</dt>
+                <dd><?= $this->season->getYears(); ?></dd>
+            <dt>Year</dt>
+                <dd><?= $this->season->getYear(); ?></dd>
+        </dl>
+    </div>
+	<?php /*
+    <div class="span5">
+        <h3><?= $this->season->getName(); ?> Tasks</h3>
+        <table>
+            <?php 
+                foreach ($this->season->getTasks() as $task){
+                    echo '<tr><td><a href="/application/task/detail?recid=' . 
+                        $task->getRecid() . '">' . $task->getName() . '</a></td></tr>';
+                }
+            ?>
+        </table>
+    </div>
+    */?>
+</div>

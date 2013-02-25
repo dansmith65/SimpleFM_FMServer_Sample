@@ -43,6 +43,7 @@ class Module
          * classes using this technique. Notice the use of a closure here for the adapter instead of a factory
          * in the module.config.php. Use of the factory requires use of the hardcoded config name
          */
+    	/*
         return array(
             'factories' => array(
                 'alternate_simple_fm' => function ($sm) {
@@ -67,5 +68,6 @@ class Module
                 },
             ),
         );
+        */
     }
 }

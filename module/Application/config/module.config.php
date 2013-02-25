@@ -52,7 +52,7 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'Application\Controller\Index' => 'Application\Controller\IndexController',
-            'Application\Controller\Project' => 'Application\Controller\ProjectController',
+            'Application\Controller\Season' => 'Application\Controller\SeasonController',
             'Application\Controller\Task' => 'Application\Controller\TaskController',
         ),
     ),
@@ -89,12 +89,12 @@ return array(
                  * has an example you can look at.
                  */
                     'simple_fm' => 'Soliant\SimpleFM\ZF2\AdapterServiceFactory',
-                    'gateway_project' => function ($sm) {
-                        $entity = new \Application\Entity\Project();
+                    'gateway_season' => function ($sm) {
+                        $entity = new \Application\Entity\Season();
                         $simpleFMAdapter = $sm->get('simple_fm');
-                        $layoutnamePointer = 'ProjectPointer';
-                        $layoutname = 'Project';
-                        return new \Application\Gateway\Project($sm, $entity, $simpleFMAdapter, $layoutnamePointer, $layoutname);
+                        $layoutnamePointer = 'seasonPointer';
+                        $layoutname = 'season';
+                        return new \Application\Gateway\Season($sm, $entity, $simpleFMAdapter, $layoutnamePointer, $layoutname);
                     },
                     'gateway_task' => function ($sm) {
                         $entity = new \Application\Entity\Task();
